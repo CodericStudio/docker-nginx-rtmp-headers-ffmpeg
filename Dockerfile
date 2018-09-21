@@ -11,7 +11,7 @@ EXPOSE 80
 RUN mkdir -p /opt/data && mkdir /www
 
 # Build dependencies.
-RUN	apt-get update && apt-get install -y build-essentials ca-certificates \
+RUN	apt-get update && apt-get install -y build-essential ca-certificates \
   curl \
   gcc \
   libc-dev \
