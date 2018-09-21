@@ -20,10 +20,10 @@ RUN	apt-get update && apt-get install -y build-essential ca-certificates \
   libpcre3 \
   libpcre3-dev \
   libssl-dev \
-  zlib1g-dev
+  zlib1g-dev nasm libogg-dev libvpx-dev libvorbis-dev  libass-dev libwebp-dev \
+  libtheora-dev yasm libmp3lame-dev libx264-dev libx265-dev libfreetype6-dev \
+  librtmp-dev libopus-dev libfdk-aac-dev
  
-
-
 # Get nginx source.
 RUN cd /tmp && \
   wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz && \
@@ -45,11 +45,6 @@ RUN cd /tmp/nginx-${NGINX_VERSION} && \
   --http-log-path=/opt/nginx/logs/access.log \
   --with-debug && \
   cd /tmp/nginx-${NGINX_VERSION} && make && make install
-
-# FFmpeg dependencies.
-RUN apk add --update nasm yasm-dev lame-dev libogg-dev x264-dev libvpx-dev libvorbis-dev x265-dev freetype-dev libass-dev libwebp-dev rtmpdump-dev libtheora-dev opus-dev
-RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
-RUN apk add --update fdk-aac-dev
 
 # Get FFmpeg source.
 RUN cd /tmp/ && \
