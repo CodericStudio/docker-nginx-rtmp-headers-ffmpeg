@@ -11,7 +11,7 @@ EXPOSE 80
 RUN mkdir -p /opt/data && mkdir /www
 
 # Build dependencies.
-RUN	apk update && apk add --virtual build-dependencies && apk add --update
+RUN	apk update && apk add --virtual build-dependencies && apk add --update \
 --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
 --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \&& apk add	\
   binutils \
