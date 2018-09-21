@@ -1,9 +1,9 @@
-FROM alpine:3.4
-LABEL author Alfred Gutierrez <alf.g.jr@gmail.com>
+FROM alpine:latest
+LABEL author Shabbir R Hassanally <shabbir@hassanally.net>
 
-ENV NGINX_VERSION 1.13.9
+ENV NGINX_VERSION 1.13.12
 ENV NGINX_RTMP_VERSION 1.2.1
-ENV FFMPEG_VERSION 3.4.2
+ENV FFMPEG_VERSION 4.0.2
 
 EXPOSE 1935
 EXPOSE 80
