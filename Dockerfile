@@ -17,7 +17,10 @@ RUN	apt-get update && apt-get install -y build-essential ca-certificates \
   libc-dev \
   wget \
   htop \
-  libpcre3 libpcre3-dev
+  libpcre3 \
+  libpcre3-dev \
+  libssl-dev \
+  libssl
  
 
 
