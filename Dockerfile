@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:latest
 LABEL author Shabbir R Hassanally <shabbir@hassanally.net>
 
 ENV NGINX_VERSION 1.13.12
@@ -11,13 +11,7 @@ EXPOSE 80
 RUN mkdir -p /opt/data && mkdir /www
 
 # Build dependencies.
-RUN	apk update && apk add --virtual build-dependencies && apk add --update \
---repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
---repository http://dl-cdn.alpinelinux.org/alpine/edge/community \&& apk add	\
-  binutils \
-  binutils-libs \
-  build-base \
-  ca-certificates \
+RUN	apt-get update && apt-get install -y build-essentials ca-certificates \
   curl \
   gcc \
   libc-dev \
@@ -31,6 +25,7 @@ RUN	apk update && apk add --virtual build-dependencies && apk add --update \
   pkgconf \
   pkgconfig \
   zlib-dev
+
 
 # Get nginx source.
 RUN cd /tmp && \
