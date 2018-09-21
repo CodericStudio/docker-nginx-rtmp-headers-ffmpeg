@@ -14,7 +14,9 @@ RUN mkdir -p /opt/data && mkdir /www
 RUN	apt-get update && apt-get install -y build-essential ca-certificates \
   curl \
   gcc \
-  libc-dev 
+  libc-dev \
+  wget \
+  htop
  
 
 
