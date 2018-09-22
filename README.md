@@ -13,7 +13,7 @@ Based on [https://github.com/alfg/docker-nginx-rtmp](alfg/docker-nginx-rtmp)
 [![Docker Stars](https://img.shields.io/docker/stars/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/)
 [![Docker Automated build](https://img.shields.io/docker/automated/alfg/nginx-rtmp.svg)](https://hub.docker.com/r/alfg/nginx-rtmp/builds/)
-[![Build Status](https://travis-ci.org/shabbirh/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/shabbirh/docker-nginx-rtmp.svg?branch=master)
+[![Build Status](https://travis-ci.org/shabbirh/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/shabbirh/docker-nginx-rtmp)
 
 ## Usage
 
