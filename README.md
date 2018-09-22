@@ -28,7 +28,7 @@ or
 * Build and run container from source:
 ```
 docker build -t nginx-rtmp .
-docker run -it -p 1935:1935 -p 8080:80 --rm nginx-rtmp
+docker run -it -p 1935:1935 -p 80:80 --rm nginx-rtmp
 ```
 
 * Stream live content to:
@@ -44,7 +44,7 @@ rtmp://<server ip>:1935/stream/$STREAM_NAME
 ### Watch Stream
 * In Safari, VLC or any HLS player, open:
 ```
-http://<server ip>:8080/live/$STREAM_NAME.m3u8
+http://<server ip>:80/live/$STREAM_NAME.m3u8
 ```
 * Example: `http://localhost/live/teststream`
 
