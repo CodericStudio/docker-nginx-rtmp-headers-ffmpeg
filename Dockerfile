@@ -3,6 +3,7 @@ LABEL author Shabbir R Hassanally <shabbir@hassanally.net>
 
 ENV NGINX_VERSION 1.13.12
 ENV NGINX_RTMP_VERSION 1.2.1
+ENV NGINX_MORE_HEADERS_VERSION 0.33
 ENV FFMPEG_VERSION 4.0.2
 
 EXPOSE 1935
@@ -35,11 +36,17 @@ RUN cd /tmp && \
   wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz && \
   tar zxf v${NGINX_RTMP_VERSION}.tar.gz && rm v${NGINX_RTMP_VERSION}.tar.gz
 
+# Get headers_more_nginx_module.
+RUN cd /tmp && \
+  wget https://github.com/openresty/headers-more-nginx-module/archive/v${NGINX_MORE_HEADERS_VERSION}.tar.gz && \
+  tar zxf v${NGINX_MORE_HEADERS_VERSION}.tar.gz && rm v${NGINX_MORE_HEADERS_VERSION}.tar.gz
+
 # Compile nginx with nginx-rtmp module.
 RUN cd /tmp/nginx-${NGINX_VERSION} && \
   ./configure \
   --prefix=/opt/nginx \
   --add-module=/tmp/nginx-rtmp-module-${NGINX_RTMP_VERSION} \
+  --add-module=/tmp/headers-more-nginx-module-${NGINX_MORE_HEADERS_VERSION} \
   --conf-path=/opt/nginx/nginx.conf \
   --error-log-path=/opt/nginx/logs/error.log \
   --http-log-path=/opt/nginx/logs/access.log \
