@@ -90,4 +90,12 @@ RUN rm -rf /var/cache/* /tmp/*
 ADD nginx.conf /opt/nginx/nginx.conf
 ADD static /www/static
 
+# Forward logs to Docker
+
+
+RUN ln -sf /dev/stdout /opt/nginx/logs/access.log && \
+ln -sf /dev/stderr /opt/nginx/logs/error.log
+
+
+
 CMD ["/opt/nginx/sbin/nginx"]
