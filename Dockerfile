@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 LABEL author Shabbir R Hassanally <shabbir@hassanally.net>
 
 ENV NGINX_VERSION 1.13.12
@@ -85,6 +85,7 @@ RUN cd /tmp/ffmpeg-${FFMPEG_VERSION} && \
 
 # Cleanup.
 RUN rm -rf /var/cache/* /tmp/*
+RUN apt-get clean
 
 # Add NGINX config and static files.
 ADD nginx.conf /opt/nginx/nginx.conf
@@ -99,3 +100,4 @@ ln -sf /dev/stderr /opt/nginx/logs/error.log
 
 
 CMD ["/opt/nginx/sbin/nginx"]
+
