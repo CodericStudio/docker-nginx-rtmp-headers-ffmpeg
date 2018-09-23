@@ -95,7 +95,7 @@ ADD static /www/static
 
 
 RUN ln -sf /dev/stdout /opt/nginx/logs/access.log && \
-ln -sf /dev/stderr /opt/nginx/logs/error.log
+ln -sf /dev/stderr /opt/nginx/logs/error.log && ln -sf /dev/stdout /opt/nginx/logs/httpaccess.log && ln -s /dev/stdout /opt/nginx/logs/rtmpaccess.log
 
 
 
