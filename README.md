@@ -14,7 +14,7 @@ Based on [https://github.com/alfg/docker-nginx-rtmp](alfg/docker-nginx-rtmp)
 [![Docker Stars](https://img.shields.io/docker/stars/shabbirh/docker-nginx-rtmp-headers-ffmpeg.svg)](https://hub.docker.com/r/shabbirh/docker-nginx-rtmp-headers-ffmpeg/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/shabbirh/docker-nginx-rtmp-headers-ffmpeg.svg)](https://hub.docker.com/r/shabbirh/docker-nginx-rtmp-headers-ffmpeg/)
 [![Docker Automated build](https://img.shields.io/docker/automated/shabbirh/docker-nginx-rtmp-headers-ffmpeg.svg)](https://hub.docker.com/r/shabbirh/docker-nginx-rtmp-headers-ffmpeg/builds/)
-[![Build Status](https://travis-ci.org/shabbirh/docker-nginx-rtmp.svg?branch=master)](https://travis-ci.org/shabbirh/docker-nginx-rtmp)
+[![Build Status](https://travis-ci.org/shabbirh/docker-nginx-rtmp-headers-ffmpeg.svg?branch=master)](https://travis-ci.org/shabbirh/docker-nginx-rtmp-headers-ffmpeg)
 
 ## Usage
 
