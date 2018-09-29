@@ -6,6 +6,7 @@ default settings for HLS live streaming. Built on Ubuntu Linux
 * nginx-rtmp-module 1.2.1 (compiled from source)
 * headers-more-nginx-module 0.33 (compiled from source)
 * ffmpeg 4.0.2 (compiled from source)
+* nginx-vod-module 1.23 (compiled from source)
 * Default HLS settings (See: [nginx.conf](nginx.conf))
 
 Based on [https://github.com/alfg/docker-nginx-rtmp](alfg/docker-nginx-rtmp)
@@ -847,3 +848,4 @@ DE caf             Apple CAF (Core Audio Format)
 * https://www.ffmpeg.org
 * https://obsproject.com
 * https://github.com/alfg/docker-nginx-rtmp
+* https://github.com/kaltura/nginx-vod-module
